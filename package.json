@@ -1,0 +1,21 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Introdution to web components with JS and HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sid5488/web-components.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sid5488/web-components/issues"
+  },
+  "homepage": "https://github.com/Sid5488/web-components#readme"
+}
