@@ -5,8 +5,21 @@ class Header extends HTMLHeadElement {
     this.show();
   }
 
-  show() {
-    document.querySelector('custom-header').style.color = 'red';
+  async show() {
+    this.attachShadow({ mode: 'open' })
+      .innerHTML = await this.template();
+  
+  }
+
+  async fetchData() {
+    const [path] = document.URL.split('/public');
+
+    return await fetch(`${path}/src/components/custom-header/custom-header.html`)
+      .then(response => response.text());
+  }
+
+  get template() {
+    return (async () => await this.fetchData());
   }
 }
 

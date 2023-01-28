@@ -5,10 +5,20 @@ class CustomApplication extends HTMLDivElement {
     this.show();
   }
 
-  show() {
-    const customApplication = document.querySelector('custom-application');
+  async show() {
+    this.attachShadow({ mode: 'open' })
+      .innerHTML = await this.template();
+  }
 
-    console.log(customApplication);
+  async fetchData() {
+    const [path] = document.URL.split('/public');
+
+    return await fetch(`${path}/src/index.html`)
+      .then(response => response.text());
+  }
+
+  get template() {
+    return (async () => await this.fetchData());
   }
 }
 
