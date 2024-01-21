@@ -1,0 +1,16 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: 0;
+}
+
+html, body, input, textarea {
+	font-family: 'Roboto', sans-serif;
+}
+
+:root {
+	--dark-blue: #023E8A; 
+	--medium-blue: #0077B6; 
+	--light-blue: #90E0EF; 
+	--pale-blue: #CAF0F8;
+}
