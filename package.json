@@ -12,8 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/Sid5488/web-components.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "web",
+    "components",
+    "Node",
+    "JavaScript"
+  ],
+  "author": "Guilherme Sousa <guilhermenoobsaibot@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Sid5488/web-components/issues"
