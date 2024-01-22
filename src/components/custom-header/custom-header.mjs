@@ -1,4 +1,4 @@
-import { BaseHTMLComponent } from "../../../lib/src/BaseHTMLComponent.mjs";
+import { BaseHTMLComponent } from "../../../lib/src/base-html-component.mjs";
 
 class CustomHeader extends BaseHTMLComponent {
   constructor() {

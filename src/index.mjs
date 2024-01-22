@@ -1,4 +1,4 @@
-import { DefineElementsConfig } from "../lib/src/configuration/define.elements.config.mjs";
+import { DefineElementsConfig } from "../lib/src/configuration/define-elements-config.mjs";
 import { elements } from "./module/define.module.mjs";
 
 class Application {

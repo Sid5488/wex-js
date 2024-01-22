@@ -4,12 +4,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Application</title>
   </head>
 
   <body>
-    <home-app></home-app>
+    <wex-route path="/" title="Home" component="home-app" />
+    <wex-route path="/another" title="Another" component="another-page" />
+
+    <div id="outlet"></div>
 
     <script type="module" src="../src/index.mjs"></script>
   </body>
