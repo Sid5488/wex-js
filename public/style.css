@@ -13,4 +13,11 @@ html, body, input, textarea {
 	--medium-blue: #0077B6; 
 	--light-blue: #90E0EF; 
 	--pale-blue: #CAF0F8;
+	--background-color: #2B2A33;
+	--text-color: #fff;
+}
+
+html, body {
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
