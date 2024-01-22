@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Introdution to web components with JS and HTML",
-  "main": "index.js",
+  "main": "lib/src/server.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
