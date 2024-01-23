@@ -3,7 +3,7 @@ import { Observable } from "../../../lib/src/observable/observables.mjs";
 
 class HomeApp extends BaseHTMLComponent {
 	constructor() {
-		super(import.meta.url, []);
+		super("home-app", []);
 	}
 
 	connectedCallback() {
