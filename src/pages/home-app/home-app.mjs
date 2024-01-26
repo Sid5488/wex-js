@@ -3,7 +3,7 @@ import { Observable } from "../../../lib/src/observable/observables.mjs";
 
 class HomeApp extends BaseHTMLComponent {
 	constructor() {
-		super("home-app", []);
+		super("home-app", ["text-app"]);
 	}
 
 	connectedCallback() {
@@ -17,7 +17,6 @@ class HomeApp extends BaseHTMLComponent {
 		const input = this.shadowRoot.getElementById("name");
 
 		if (input !== null) {
-
 			input.addEventListener("input", (event) => {
 				inputObservable._value = event.target.value;
 				this.name = inputObservable._value;

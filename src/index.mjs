@@ -10,6 +10,7 @@ class Application {
 
   static configure() {
     PageConstants.pagesPath = "/src/pages/";
+    PageConstants.componentsPath = "/src/components/";
   }
 
   static define() {
