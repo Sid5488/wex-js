@@ -15,6 +15,15 @@
 		<div item="i"></div>
 	</text-app>
 
-	<input type="text" id="name" placeholder="Type here!">
+	<div id="list" w-for="name in names">
+		<li>{{ name }}</li>
+	</div>
+
+	<div>
+		<input type="text" id="name" placeholder="Type here!">
+
+		<button id="button">Add</button>
+	</div>
+
 	<span id="value"></span>
 </section>

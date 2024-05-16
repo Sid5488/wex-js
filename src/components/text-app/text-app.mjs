@@ -1,4 +1,4 @@
-import { BaseHTMLComponent } from "../../../lib/src/base-html-component.mjs";
+import { BaseHTMLComponent } from "../../../lib/src/modules/components/base-html-component.mjs";
 
 class TextApp extends BaseHTMLComponent {
 	items = [1, 2, 3, 4, 5];
@@ -11,7 +11,7 @@ class TextApp extends BaseHTMLComponent {
 	connectedCallback() {
 		super.connectedCallback();
 
-		this.test();
+		// this.test();
 	}
 
 	test() {
