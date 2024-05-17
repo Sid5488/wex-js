@@ -11,13 +11,9 @@
 		>here!</a>
 	</span>
 
-	<text-app l-for="items" l-item="item">
-		<div item="i"></div>
-	</text-app>
+	<text-app></text-app>
 
-	<div id="list" w-for="name in names">
-		<li>{{ name }}</li>
-	</div>
+	<span id="value"></span>
 
 	<div>
 		<input type="text" id="name" placeholder="Type here!">
@@ -25,5 +21,7 @@
 		<button id="button">Add</button>
 	</div>
 
-	<span id="value"></span>
+	<div id="list" w-for="name in names">
+		<li>{{ name }}</li>
+	</div>
 </section>

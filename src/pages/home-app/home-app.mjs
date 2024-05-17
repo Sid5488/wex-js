@@ -1,8 +1,8 @@
-import { BaseHTMLComponent } from "../../../lib/src/modules/components/base-html-component.mjs";
-import { Observable } from "../../../lib/src/observable/observables.mjs";
+import { Component } from "../../../lib/src/modules/components/component.mjs";
+import { Observable } from "../../../lib/src/observables/observables.mjs";
 
-class HomeApp extends BaseHTMLComponent {
-	names = [];
+class HomeApp extends Component {
+	names = new Observable(this);
 	clickEvent = false;
 
 	constructor() {
@@ -41,15 +41,8 @@ class HomeApp extends BaseHTMLComponent {
 
 		if (!this.clickEvent) {
 			button.addEventListener("click", _ => {
-				this.names.push(this.name);
-
-				const template = document
-					.querySelectorAll("[w-for], [w-onclick]")[0].innerHTML;
-
-				this.interpreterAttributes(
-					this.shadowRoot.querySelectorAll("[w-for], [w-onclick]"), 
-					template
-				);
+				if (this.names._value === null) this.names._value = [this.name];
+				else this.names._value = [...this.names._value, this.name];
 			});
 
 			this.clickEvent = true;
