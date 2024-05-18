@@ -21,6 +21,8 @@ class HomeApp extends Component {
 
 			this.fluxControl._value = true;
 		}
+
+		this.name._value = null;
 	}
 }
 
