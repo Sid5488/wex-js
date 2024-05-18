@@ -3,6 +3,9 @@ import { Observable } from "../../../lib/src/observables/observables.mjs";
 
 class HomeApp extends Component {
 	names = new Observable(this);
+	fluxControl = new Observable(this);
+	name = new Observable(this);
+
 	clickEvent = false;
 
 	constructor() {
@@ -11,29 +14,8 @@ class HomeApp extends Component {
 
 	connectedCallback() {
 		super.connectedCallback();
-		
-		this.getValueInput();
+
 		this.add();
-	}
-
-	getValueInput() {
-		const inputObservable = new Observable();
-		const input = this.shadowRoot.getElementById("name");
-
-		if (input !== null) {
-			input.addEventListener("input", (event) => {
-				inputObservable._value = event.target.value;
-				this.name = inputObservable._value;
-	
-				this.showValue();
-			});
-		}
-	}
-
-	showValue() {
-		const value = this.shadowRoot.getElementById("value");
-
-		value.innerText = this.name;
 	}
 
 	add() {
@@ -41,8 +23,12 @@ class HomeApp extends Component {
 
 		if (!this.clickEvent) {
 			button.addEventListener("click", _ => {
-				if (this.names._value === null) this.names._value = [this.name];
-				else this.names._value = [...this.names._value, this.name];
+				if (this.name._value !== undefined) {
+					if (this.names._value === null) this.names._value = [this.name._value];
+					else this.names._value = [...this.names._value, this.name._value];
+	
+					this.fluxControl._value = true;
+				}
 			});
 
 			this.clickEvent = true;
