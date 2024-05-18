@@ -6,32 +6,20 @@ class HomeApp extends Component {
 	fluxControl = new Observable(this);
 	name = new Observable(this);
 
-	clickEvent = false;
-
 	constructor() {
 		super("home-app", ["text-app"]);
 	}
 
 	connectedCallback() {
 		super.connectedCallback();
-
-		this.add();
 	}
 
 	add() {
-		const button = this.shadowRoot.getElementById("button");
+		if (this.name._value !== undefined && this.name._value !== null) {
+			if (this.names._value === null) this.names._value = [this.name._value];
+			else this.names._value = [...this.names._value, this.name._value];
 
-		if (!this.clickEvent) {
-			button.addEventListener("click", _ => {
-				if (this.name._value !== undefined) {
-					if (this.names._value === null) this.names._value = [this.name._value];
-					else this.names._value = [...this.names._value, this.name._value];
-	
-					this.fluxControl._value = true;
-				}
-			});
-
-			this.clickEvent = true;
+			this.fluxControl._value = true;
 		}
 	}
 }
