@@ -14,8 +14,7 @@ class HomeApp extends Component {
 
 	connectedCallback() {
 		super.connectedCallback();
-		
-		// this.getValueInput();
+
 		this.add();
 	}
 
