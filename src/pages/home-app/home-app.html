@@ -11,17 +11,17 @@
 		>here!</a>
 	</span>
 
-	<text-app></text-app>
+	<text-app w-if="fluxControl"></text-app>
 
-	<span id="value"></span>
+	<span w-value="name"></span>
 
 	<div>
-		<input type="text" id="name" placeholder="Type here!">
+		<input type="text" id="name" placeholder="Type here!" w-on-change="name">
 
 		<button id="button">Add</button>
 	</div>
 
-	<div id="list" w-for="name in names">
+	<div w-for="name in names">
 		<li>{{ name }}</li>
 	</div>
 </section>
