@@ -16,7 +16,13 @@
 	<span w-value="name"></span>
 
 	<div>
-		<input type="text" id="name" placeholder="Type here!" w-on-change="name">
+		<input 
+			type="text" 
+			id="name" 
+			placeholder="Type here!" 
+			w-on-change="name"
+			value="{{name}}"
+		>
 
 		<button w-on-click="add()">Add</button>
 	</div>
