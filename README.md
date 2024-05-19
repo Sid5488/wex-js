@@ -2,6 +2,12 @@
 
 Wex.JS is a JavaScript library for building user interfaces using web components with JS and HTML.
 
+## Installation
+
+```bash
+npm i -g wex-js-cli
+```
+
 ## Library Structure
 
 The library is organized into two main sections: Pages and Components.
