@@ -1,13 +1,12 @@
 {
   "name": "wex-js",
-  "version": "1.0.0",
+  "version": "1.0.11",
   "type": "module",
   "description": "Introdution to web components with JS and HTML",
-  "main": "lib/src/server.mjs",
+  "main": "node_modules/wex-js/lib/src/server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node .",
-    "postinstall": "cp -r template/ ./"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
