@@ -1,12 +1,22 @@
 {
   "name": "wex-js",
-  "version": "1.0.16",
+  "version": "1.0.31",
   "type": "module",
   "description": "Introdution to web components with JS and HTML",
   "main": "./lib/src/server.mjs",
+  "module": "./lib/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ."
+  },
+  "dependencies": {
+    "wex-js": "^1.0.31"
+  },
+  "exports": {
+    ".": "./lib/index.mjs"
+  },
+  "imports": {
+    "wex-js": "./lib/index.mjs"
   },
   "repository": {
     "type": "git",
