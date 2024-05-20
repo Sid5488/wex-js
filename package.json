@@ -1,16 +1,26 @@
 {
-  "name": "web-components",
-  "version": "1.0.0",
+  "name": "wex-js",
+  "version": "1.0.31",
   "type": "module",
   "description": "Introdution to web components with JS and HTML",
-  "main": "lib/src/server.mjs",
+  "main": "./lib/src/server.mjs",
+  "module": "./lib/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ."
   },
+  "dependencies": {
+    "wex-js": "^1.0.31"
+  },
+  "exports": {
+    ".": "./lib/index.mjs"
+  },
+  "imports": {
+    "wex-js": "./lib/index.mjs"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sid5488/web-components.git"
+    "url": "git+https://github.com/Sid5488/wex-js.git"
   },
   "keywords": [
     "web",
@@ -21,7 +31,7 @@
   "author": "Guilherme Sousa <guilhermenoobsaibot@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sid5488/web-components/issues"
+    "url": "https://github.com/Sid5488/wex-js/issues"
   },
-  "homepage": "https://github.com/Sid5488/web-components#readme"
+  "homepage": "https://github.com/Sid5488/wex-js#readme"
 }
