@@ -7,7 +7,7 @@
   "module": "./lib/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ."
+    "start": "node . --env internalDev"
   },
   "dependencies": {
     "wex-js": "^1.0.31"
